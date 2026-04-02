@@ -55,10 +55,3 @@ A vanilla policy gradient method that changes at each step rather than every epi
 	This project introduced an RL approach to account for unpredictable neuromechanical delays, which provided a novel technique without the use of a forward model of the world to calculate the consequences or future states of action. The current RL model cannot handle delays more than 104 ms, however, humans showed the ability to handle the delays up to 470 ms. To achieve this, I will first implement an RL model based on the policy gradient method and evaluate its maximum delay-handling capacity. Next, I will incorporate the proposed augmented state to improve delay management. Finally, I will reassess the maximum delay-handling performance and interpret the results from a physiological perspective. For the first step of pushing this chapter forward, I have developed an initial version of the incremental policy gradient method to control the inverted pendulum. Currently, it needs adjustment of hyperparameters to increase the success rate of the simulations. 
 
 
-<img width="972" height="438" alt="image" src="https://github.com/user-attachments/assets/4e473fa1-58a8-49d0-8803-8747d5d0b36d" />
-
-
-
-<img width="937" height="516" alt="image" src="https://github.com/user-attachments/assets/192a092d-7740-4cb3-93ee-382a1f4f0239" />
-
-<img width="955" height="572" alt="image" src="https://github.com/user-attachments/assets/e0be0acd-2e8a-4072-8689-fbf3ba5699fb" />
