@@ -11,6 +11,9 @@ rated that humans can control their balance with delays larger than 470 ms [21].
 
 <img width="1074" height="474" alt="image" src="https://github.com/user-attachments/assets/b41961d8-ef4c-4c87-ad02-be515a824622" />
 
+<img width="648" height="499" alt="image" src="https://github.com/user-attachments/assets/c8e34265-9e1d-4a86-812a-c58fe3b0ec8e" />
+
+
 
 2 Introduction
 
