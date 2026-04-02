@@ -36,21 +36,21 @@ I will use RL features to establish a framework to handle delays and incorporate
 
 3 Proposed method
 
-	3.1 Change to policy gradient 
+	3-1 Change to policy gradient 
 	
 	I will change the current RL model to a continuous version. In a continuous form of RL (such as online or incremental policy gradient [8]), the function will be updated for all possible states in the system. Vanilla policy gradient (VPG) is a reinforcement learning technique commonly used to directly maximize policies through maximizing the expected cumulative rewards. Unlike value-based approaches, which involve estimating the value function, the VPG method directly optimizes the policy by adjusting its parameters to increase the likelihood of selecting actions that yield higher rewards. It implements a Monte Carlo sampling technique to capture complete paths (state-action-reward sequences) and calculates the gradient of policy parameters according to the rewards that it detects in the paths.
 	
 A vanilla policy gradient method that changes at each step rather than every episode is often referred to as an online or incremental policy gradient method. In contrast to the vanilla policy gradient, which waits for an episode final return to calculate the total return and update the policy, the incremental policy gradient approach updates the policy every observation so that it immediately responds to any new data. This incremental updating can help increase the learning pace and stability, particularly during longer episodes where delayed updates would stall the information about the reward. I will use the incremental policy gradient approach to develop the standing balance controller. In this approach, instead of using the return (the sum of future rewards over the entire trajectory from time), it will use the advantage or temporal difference (TD) error to approximate the immediate reward-to-go at each step. 
 
 
-	3.2 Efferent copy of commands as state
+	3-2 Efferent copy of commands as state
 	
 	The efferent copies of commands and cerebellum have been argued to help as a predictor since it records series of actions [11], [56]. Moreover, the CNS processes multisensory information by detecting correlation, lag, and synchrony, integrating related signals, and adapting to conflicts across senses [90]. Parise & Ernst [90], proposed a model called the multisensory correlation detector (MCD), to integrate sensory and incoming signals. This model offers a unified explanation of multisensory perception that aligns closely with human experiences documented in various empirical studies. For my study, I will use the same concepts and create a convolution of state and actions and provide this as a state of the model to augment the state space. I will compare the effectiveness of this convolution for handling delays to an RL model with an augmented state only by a function of action. The proposed diagram is depicted in Figure 24. This additional information enables the system to understand the previous state of the inverted pendulum and the actions that were applied to it. 
 
  <img width="937" height="516" alt="image" src="https://github.com/user-attachments/assets/024b9251-6af3-44ce-8d48-feeaa5552168" />
 
 
-	3.3 Comparison to conventional models
+	3-3 Comparison to conventional models
 	
 	As the final step for this chapter, I will compare the performance of the control of the inverted pendulum as a representation of the human body for unexpected delays between the proposed method in this chapter to the method proposed by Rasman and colleagues. Similar to Chapter 2, I propose to perform 10 iterations of training the new RL framework and test the resultant controller by 10 different noise set signals. I expect that the RL model can control unexpected delays (up to 530 ms) and result in a success rate (the percentage of successfully keeping the model upright for 60 seconds, see Chapter 2) higher than 70 percent. Also, the dynamic quality of the control, the MPF, the range of sway, and the resultant preferred posture by these controllers will be compared. I will also focus on the maximum delay that the model can handle and describe the reasons from a physiological perspective. 
 	
