@@ -5,8 +5,12 @@ Please download the noises from here:
 https://sensorimotor-cloud.hkin.ubc.ca:25683/s/qp35LEBKQsggryY
 
 
+
 Conventional PID and LQR controllers are able to balance with neural delays up to 300 to 350 ms [41], but larger time delays lead to unstable control. However, Rasman and colleagues demonst
 rated that humans can control their balance with delays larger than 470 ms [21]. In an attempt to explain this, an enhanced LQR model based on the idea of forward internal model was able to control simulations of standing balance with delays of 470 ms [58]. However, these models require internal forward models to predict the outcome of an action in the future, which has no proven correlates in physiology. Currently the RL model is able to control the standing balance up to 104 ms, however, the Q-learning method is susceptible to delays. Therefore, in this chapter, I will develop a continues method for RL model and check the handling of delays. Also, I will explore RL features to explain the handling of delays in the control of standing balance by incorporating copies of motor commands in the decision-making process. 
+
+<img width="1074" height="474" alt="image" src="https://github.com/user-attachments/assets/b41961d8-ef4c-4c87-ad02-be515a824622" />
+
 
 2 Introduction
 
